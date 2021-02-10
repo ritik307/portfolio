@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { createRef } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+// Semantic ui
+import { Grid, Sticky } from "semantic-ui-react";
+// custom
+import Home from "./components/routes/Home";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Education from "./components/routes/Education";
+import Workx from "./components/routes/Workx";
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <BrowserRouter>
+          <Route path="/" exact component={Home} />
+          <Route path="/education" exact component={Education} />
+          <Route path="/workx" exact component={Workx} />
+        </BrowserRouter>
+      </div>
+    );
+  }
 }
-
 export default App;

@@ -1,4 +1,9 @@
 .sidebar{
-    position: fixed !important;
+    
+/*     
     max-width: 35% !important;
+    background-color: brown !important; */
 }
+/* .sidebar .content{
+    position: absolute !important;
+} */

@@ -1,24 +1,64 @@
 import React from "react";
-
+import { BrowserRouter, Link } from "react-router-dom";
+//Semantic ui
+import {
+  Container,
+  Grid,
+  GridColumn,
+  Header,
+  Icon,
+  Image,
+} from "semantic-ui-react";
+//CSS
 import "../../css/master.css";
+// Image
+import profile from "../../images/profile.jpg";
 class SidebarContent extends React.Component {
-
   render() {
     return (
       <div>
         <div className="sidebar">
-          <h1>Sidebar</h1>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
+          {/* <Container > */}
+          <Image src={profile} size="small" circular centered></Image>
+          <Header as="h2" textAlign="center" className="header">
+            Ritik Rawal
+            <Header.Subheader className="header">
+              Full Stack Web Developer
+            </Header.Subheader>
+          </Header>
+          <div className="menu1">
+            <a href="https://github.com/ritik307">
+              <Icon name="github" className="ico1"></Icon>
+            </a>
+            <a href="https://www.linkedin.com/in/ritik-rawal-698a18142/">
+              <Icon name="linkedin" className="ico1"></Icon>
+            </a>
+            <a href="https://twitter.com/realwolf307">
+              <Icon name="twitter" className="ico1"></Icon>
+            </a>
+            {/* <a href="U01NGG1LGFJ">
+                  <Icon name="slack" className="ico"></Icon>
+                </a> */}
+          </div>
+          <div className="menu2">
+            <Link to="/">
+              <Icon name="code" className="ico"></Icon>
+            </Link>
+            <Link to="/education">
+              <Icon name="book" className="ico"></Icon>
+            </Link>
+            
+            <Link to="/workx">
+              <Icon name="edit" className="ico"></Icon>
+            </Link>
+            <Link to="/about">
+              <Icon name="user" className="ico"></Icon>
+            </Link>
+            {/* <br/> */}
+            <Icon name="mail" className="ico"></Icon>
+          </div>
+
+          {/* </Container> */}
         </div>
       </div>
     );

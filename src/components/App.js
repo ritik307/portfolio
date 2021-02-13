@@ -24,27 +24,16 @@ let styles={
     overflow: "hidden"
   },
   sidebar: {
-    zIndex: 2,
-    position: "absolute",
-    top: 0,
-    bottom: 0,
-    transition: "transform .3s ease-out",
-    WebkitTransition: "-webkit-transform .3s ease-out",
-    willChange: "transform",
-    overflowY: "auto",
+    width: 500,
+    height: "100%",
     backgroundImage:`linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.6)),url(${sidebarbg2})` ,
     backgroundSize:"cover",
     backgroundPosition:"center",
   },
   content: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    overflowY: "auto",
-    WebkitOverflowScrolling: "touch",
-    transition: "left .3s ease-out, right .3s ease-out"
+    padding: "16px",
+    height: "100%",
+    backgroundColor: "white"
   },
   overlay: {
     zIndex: 1,

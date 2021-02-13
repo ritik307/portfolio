@@ -21,10 +21,10 @@
     font-size:2em !important;
     color: white !important;
 }
-.sidebar .ico{
+.sidebar .ico2  {
     /* margin-top: 5vh !important; */
-    margin-left: 5vh !important;
-    margin-right: 5vh !important;
+    margin-left: 2vh !important;
+    margin-right: 2vh !important;
     margin-bottom: 4vh !important;
     font-size:2em !important;
     color: white !important;
@@ -32,3 +32,16 @@
 /* .sidebar a{
     text-decoration: none !important;
 } */
+
+/* HOME */
+.home .header{
+    margin-bottom: 1em !important;
+}
+/* Education */
+.education .header{
+    margin-bottom: 1em !important;
+}
+/* WorkEx */
+.workx .header{
+    margin-bottom: 1em !important;
+}

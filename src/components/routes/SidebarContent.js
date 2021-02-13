@@ -42,22 +42,24 @@ class SidebarContent extends React.Component {
           </div>
           <div className="menu2">
             <Link to="/">
-              <Icon name="code" className="ico"></Icon>
+              <Icon name="code" className="ico2"></Icon>
             </Link>
             <Link to="/education">
-              <Icon name="book" className="ico"></Icon>
+              <Icon name="book" className="ico2"></Icon>
             </Link>
             
             <Link to="/workx">
-              <Icon name="edit" className="ico"></Icon>
+              <Icon name="edit" className="ico2"></Icon>
             </Link>
             <Link to="/about">
-              <Icon name="user" className="ico"></Icon>
+              <Icon name="user" className="ico2"></Icon>
             </Link>
             {/* <br/> */}
-            <Icon name="mail" className="ico"></Icon>
+            <a href="mailto:ritikpr307@gmail.com">
+              <Icon name="mail" className="ico2"></Icon>
+            </a>
+            
           </div>
-
           {/* </Container> */}
         </div>
       </div>

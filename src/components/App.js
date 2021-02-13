@@ -100,7 +100,7 @@ class App extends React.Component {
               <Route path="/" exact component={Home} />
               <Route path="/education" exact component={Education} />
               <Route path="/workx" exact component={Workx} />
-              {/* <Route path="/about" exact component={About} /> */}
+              <Route path="/about" exact component={About} />
             
           </Sidebar>
         </Router>

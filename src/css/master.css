@@ -45,3 +45,14 @@
 .workx .header{
     margin-bottom: 1em !important;
 }
+/*About */
+.about .header{
+    margin-bottom: 1vh !important;
+}
+.about .desc{
+    text-align: justify !important;
+    font-size: 15px !important;
+}
+.about .chart{
+    margin-top: 2vh !important;
+}

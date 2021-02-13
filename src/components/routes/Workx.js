@@ -1,5 +1,6 @@
 import React from "react";
 import { Card,Header } from "semantic-ui-react";
+import Chart from "../Chart";
 class Workx extends React.Component {
   render() {
     return (

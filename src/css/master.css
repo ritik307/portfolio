@@ -37,6 +37,12 @@
 .home .header{
     margin-bottom: 1em !important;
 }
+
+.home .icons {
+    margin-top: 0.5em !important;
+    color: white !important;
+    font-size: x-large !important;
+}
 /* Education */
 .education .header{
     margin-bottom: 1em !important;

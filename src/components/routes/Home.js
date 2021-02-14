@@ -46,22 +46,33 @@ class Home extends React.Component {
           <Card fluid raised color="red">
             <Card.Content>
               <Grid columns={2} stackable>
-                    <Grid.Column>
-                        <Card.Header>Project 01</Card.Header>
-                        <Card.Meta>Jun2020-July2020</Card.Meta>
-                        <Card.Description>
-                            Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                            Loremipsum Loremipsum
-                        </Card.Description>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <Chart
-                            className="chart"
-                            chartData={this.state.chartData}
-                            text="Technology Used"
-                            displayTitle={false}
-                        />
-                    </Grid.Column>
+                <Grid.Column width={11}>
+                  <Card.Header>Project 01</Card.Header>
+                  <Card.Meta>Jun2020-July2020</Card.Meta>
+                  <Card.Description>
+                    Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                    Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                    Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                    Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                    Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                    <div className="icons">
+                      <a href="https://github.com/ritik307">
+                        <Icon name="github" style={{ color: "black" }}></Icon>
+                      </a>
+                      <a href="https://www.linkedin.com/in/ritik-rawal-698a18142/">
+                        <Icon name="linkedin" style={{ color: "black" }}></Icon>
+                      </a>
+                    </div>
+                  </Card.Description>
+                </Grid.Column>
+                <Grid.Column width={5}>
+                  <Chart
+                    className="chart"
+                    chartData={this.state.chartData}
+                    text="Technology Used"
+                    displayTitle={false}
+                  />
+                </Grid.Column>
               </Grid>
             </Card.Content>
           </Card>

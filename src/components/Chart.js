@@ -45,11 +45,7 @@ class Chart extends React.Component {
                             options={{
                                 title: {
                                     text: this.props.text,
-                                    display: this.props.displayTile,
                                     fontSize: 25
-                                },
-                                legend: {
-                                    position: this.props.legendPosition
                                 },
                                 responsiveAnimationDuration: 2000,
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Grid, Header } from "semantic-ui-react";
+import { Card, Grid, Header, Icon } from "semantic-ui-react";
 import Chart from "../Chart";
 class Home extends React.Component {
   constructor() {
@@ -14,11 +14,11 @@ class Home extends React.Component {
   getChartData() {
     this.setState({
       chartData: {
-        labels: ["C++", "MongoDB", "Express", "React", "Nodejs"],
+        labels: ["Javascript", "HTML", "CSS"],
         datasets: [
           {
             label: "Most used languages",
-            data: [20, 20, 20, 20, 20],
+            data: [8, 12, 15],
             backgroundColor: [
               "rgba(255, 99, 132, 0.6)",
               "rgba(54, 162, 235, 0.6)",
@@ -68,8 +68,8 @@ class Home extends React.Component {
                 <Grid.Column width={5}>
                   <Chart
                     className="chart"
+                    type='1'
                     chartData={this.state.chartData}
-                    text="Technology Used"
                     displayTitle={false}
                   />
                 </Grid.Column>

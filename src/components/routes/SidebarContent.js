@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter, Link } from "react-router-dom";
+// Typewriting effect
+import Typewriter from "typewriter-effect";
 //Semantic ui
 import {
   Container,
@@ -23,7 +25,21 @@ class SidebarContent extends React.Component {
           <Header as="h2" textAlign="center" className="header">
             Ritik Rawal
             <Header.Subheader className="header">
-              Full Stack Web Developer
+              <Typewriter
+                options={{
+                  strings:["Full Stack Web Developer","Opensource Enthusiast","And a wholesome senpai"],
+                  autoStart:true,
+                  loop:true
+                }}
+                onInit={
+                  (typewriter)=>{
+                  typewriter
+                  .pauseFor(1000)
+                  .deleteAll()
+                  .start();
+                }}
+              />
+              
             </Header.Subheader>
           </Header>
           <div className="menu1">

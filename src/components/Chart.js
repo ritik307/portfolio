@@ -1,12 +1,12 @@
 import React from "react";
 import { Loader } from "semantic-ui-react";
-import { Doughnut, Polar } from 'react-chartjs-2';
+import { Doughnut, Polar,HorizontalBar} from 'react-chartjs-2';
 
 class Chart extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            chartData: props.chartData
+            chartData: props.chartData    
         }
     }
     static defaultProps = {
@@ -40,7 +40,8 @@ class Chart extends React.Component {
             case '1':
                 return (
                     <div>
-                        <Polar
+                        <HorizontalBar
+                            
                             data={this.state.chartData}
                             options={{
                                 title: {
@@ -48,7 +49,20 @@ class Chart extends React.Component {
                                     fontSize: 25
                                 },
                                 responsiveAnimationDuration: 2000,
-
+                                scales: {
+                                    xAxes: [{
+                                        gridLines: {
+                                            display:false
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        barPercentage: 0.3,
+                                        
+                                        gridLines: {
+                                            display:false
+                                        }   
+                                    }]
+                                }                               
                             }}
                         />
                     </div>

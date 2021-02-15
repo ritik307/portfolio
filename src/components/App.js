@@ -11,9 +11,15 @@ import Sidebar from "react-sidebar";
 import SidebarContent from  "./routes/SidebarContent";
 // Image
 import sidebarbg2 from "../images/sidebarbg2.jpg";
-
+//local storage
+import storage from "local-storage-fallback";
+//styled components
+import {ThemeProvider,createGlobalStyle} from "styled-components";
 
 const mql = window.matchMedia(`(min-width: 800px)`);
+
+
+//sidebar style
 let styles={
   root: {
     position: "absolute",
@@ -54,7 +60,23 @@ let styles={
     bottom: 0
   }
 }
+//GlobalStyle
+// const GlobalStyle = createGlobalStyle`
+// body{
+//   background-color: ${props=>
+//     props.theme.mode === 'dark' ? '#000000 !important' : '#EEE !important'};
+//   color: ${props=>
+//     props.theme.mode === 'dark' ? '#EEE' : '#000000'};
+// }
+// `;
 
+//getting value from the local storage of the browser
+
+// function getInitialTheme(){
+//   const savedTheme = storage.getItem('theme');
+//   console.log("saved theme: ",savedTheme);
+//   return savedTheme ? JSON.parse(savedTheme) : {mode: 'light'}
+// }
 
 class App extends React.Component {
   // Sidebar content
@@ -63,10 +85,16 @@ class App extends React.Component {
     this.state = {
       sidebarDocked: mql.matches,
       sidebarOpen: false,
+      // theme: getInitialTheme()
     };
+    console.log("theme is ",this.state.theme);
     this.mediaQueryChanged = this.mediaQueryChanged.bind(this);
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
   }
+  // componentDidMount(){
+  //   console.log("cdm theme : ",this.state.theme);  
+  //   storage.setItem('theme',JSON.stringify(this.state.theme));
+  // }
   componentWillMount() {
     mql.addListener(this.mediaQueryChanged);
   }
@@ -86,24 +114,30 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Router >
-          <Sidebar
-            sidebar={
-              <SidebarContent/>
-            }
-            styles={styles}
-            open={this.state.sidebarOpen}
-            docked={this.state.sidebarDocked}
-            onSetOpen={this.onSetSidebarOpen}
-          >
-            
-              <Route path="/" exact component={Home} />
-              <Route path="/education" exact component={Education} />
-              <Route path="/workx" exact component={Workx} />
-              <Route path="/about" exact component={About} />
-            
-          </Sidebar>
-        </Router>
+        {/* <ThemeProvider theme={{mode:"dark"}}>
+          <>
+            <GlobalStyle/> */}
+            <Router >
+              <Sidebar
+                sidebar={
+                  <SidebarContent/>
+                }
+                styles={styles}
+                open={this.state.sidebarOpen}
+                docked={this.state.sidebarDocked}
+                onSetOpen={this.onSetSidebarOpen}
+              >
+                
+                  <Route path="/" exact component={Home} />
+                  <Route path="/education" exact component={Education} />
+                  <Route path="/workx" exact component={Workx} />
+                  <Route path="/about" exact component={About} />
+                
+              </Sidebar>
+            </Router>
+          {/* </>
+        </ThemeProvider> */}
+        
         
       </div>
     );

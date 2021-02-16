@@ -1,5 +1,8 @@
 import React from "react";
 import { Card, Container, Grid, Header, Segment } from "semantic-ui-react";
+// dark mode toggler
+import Toggler from "../dark-mode/Toggler";
+// chart.js
 import Chart from "../Chart";
 // Image
 import sidebarbg from "../../images/sidebarbg.jpg";
@@ -20,6 +23,7 @@ class About extends React.Component {
     this.state = {
       chartData1: {},
       chartData2: {},
+      
     };
   }
   componentWillMount() {
@@ -73,19 +77,20 @@ class About extends React.Component {
     } else {
       this.props.handleChange("light");
     }
+    
   };
   render() {
     return (
       <Holder>
         <div className="about">
           <div className="header">
-            <Header as="h1" dividing>
+            {/* <Header as="h1" dividing> */}
               <Heading>
                 About
               </Heading>
-              
-            </Header>
-            <button onClick={this.changeTheme}>change mode</button>
+              <Toggler/>
+            {/* </Header> */}
+            {/* <button onClick={this.changeTheme}>change mode</button> */}
             <Segment basic className="desc">
               I'm a 2nd year student pursuing Master's in Computer Applications
               🎓 from Guru Gobind Singh Indraprastha University 🏛. I'm a

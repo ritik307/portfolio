@@ -52,6 +52,9 @@
     margin-bottom: 1em !important;
 }
 /*About */
+.about{
+    padding: 2vh !important;
+}
 .about .header{
     margin-bottom: 1vh !important;
 }

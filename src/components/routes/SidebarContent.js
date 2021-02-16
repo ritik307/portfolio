@@ -11,11 +11,22 @@ import {
   Icon,
   Image,
 } from "semantic-ui-react";
+// darkmode toggler
+import DarkModeToggle from "react-dark-mode-toggle";
 //CSS
 import "../../css/master.css";
 // Image
 import profile from "../../images/profile.jpg";
 class SidebarContent extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      isDarkMode:false
+    }
+  }
+  toggleButton=()=>{
+    this.setState({isDarkMode:(this.state.isDarkMode===true) ? false : true});
+  }
   render() {
     return (
       <div>
@@ -41,7 +52,10 @@ class SidebarContent extends React.Component {
               />
               
             </Header.Subheader>
+            
           </Header>
+
+          
           <div className="menu1">
             <a href="https://github.com/ritik307">
               <Icon name="github" className="ico1"></Icon>

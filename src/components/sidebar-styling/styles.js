@@ -18,7 +18,7 @@ export const styles = {
       backgroundPosition: "center",
     },
     content: {
-      padding: "16px",
+      padding: "0px",
       height: "100%",
       backgroundColor: "white",
     },

@@ -6,6 +6,7 @@ import Home from "./routes/Home";
 import Education from "./routes/Education";
 import Workx from "./routes/Workx";
 import About from "./routes/About";
+import Contribution from "./routes/Contribution";
 // react sidebar
 import Sidebar from "react-sidebar";
 import SidebarContent from "./routes/SidebarContent";
@@ -43,10 +44,15 @@ class App extends React.Component {
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     mql.addListener(this.mediaQueryChanged);
+    const localTheme = window.localStorage.getItem('theme');
+    (localTheme) ? this.setState({theme:localTheme}) : this.setMode("light");
   }
-
+  setMode=(localTheme)=>{
+    window.localStorage.setItem('theme',localTheme);
+    this.setState({theme:localTheme});
+  }
   componentWillUnmount() {
     this.state.mql.removeListener(this.mediaQueryChanged);
   }
@@ -59,7 +65,8 @@ class App extends React.Component {
     this.setState({ sidebarDocked: mql.matches, sidebarOpen: false });
   }
   handleChange=(currTheme)=>{
-    this.setState({theme:currTheme});
+    // this.setState({theme:currTheme});
+    this.setMode(currTheme);
     console.log("the state is : ",this.state.theme);
   }
   render() {
@@ -75,10 +82,11 @@ class App extends React.Component {
               onSetOpen={this.onSetSidebarOpen}
             >
               {/* <MainSec> */}
-                <Route path="/" exact component={Home} />
-                <Route path="/education" exact component={Education} />
-                <Route path="/workx" exact component={Workx} />
+                <Route path="/" exact component={()=><Home theme={themes[this.state.theme]} handleChange={this.handleChange}/>}/>
+                <Route path="/education" exact component={()=><Education theme={themes[this.state.theme]} handleChange={this.handleChange}/>} />
+                <Route path="/workx" exact component={()=><Workx theme={themes[this.state.theme]} handleChange={this.handleChange}/>} />
                 <Route path="/about" exact component={()=><About theme={themes[this.state.theme]} handleChange={this.handleChange}/>} />
+                <Route path="/contribution" exact component={()=><Contribution theme={themes[this.state.theme]} handleChange={this.handleChange}/>} />
               
               {/* </MainSec> */}
 

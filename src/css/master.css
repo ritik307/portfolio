@@ -34,9 +34,9 @@
 } */
 
 /* HOME */
-.home .header{
+/* .home .header{
     margin-bottom: 1em !important;
-}
+} */
 
 .home .icons {
     margin-top: 0.5em !important;
@@ -52,16 +52,27 @@
     margin-bottom: 1em !important;
 }
 /*About */
-.about{
+/* .about{
     padding: 2vh !important;
-}
+} */
 .about .header{
     margin-bottom: 1vh !important;
 }
 .about .desc{
     text-align: justify !important;
-    font-size: 15px !important;
+    font-size: 20px !important;
+    line-height: 1.2em !important;
 }
 .about .chart{
     margin-top: 2vh !important;
 }
+/* toggle-button */
+.toggleButton{
+    float: right !important;
+    margin-top: 0.6vh !important;
+    padding-top: 0.5vh !important;
+    
+}
+/* .home .seg{
+    background-color: black !important;
+} */

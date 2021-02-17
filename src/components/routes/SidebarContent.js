@@ -84,6 +84,9 @@ class SidebarContent extends React.Component {
             <Link to="/about">
               <Icon name="user" className="ico2"></Icon>
             </Link>
+            <Link to="/about">
+              <Icon name="osi" className="ico2"></Icon>
+            </Link>
             {/* <br/> */}
             <a href="mailto:ritikpr307@gmail.com">
               <Icon name="mail" className="ico2"></Icon>

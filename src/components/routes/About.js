@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Container, Grid, Header, Segment } from "semantic-ui-react";
+import { Card, Container, Divider, Grid, Header, Segment } from "semantic-ui-react";
 // dark mode toggler
 import Toggler from "../dark-mode/Toggler";
 // chart.js
@@ -8,15 +8,9 @@ import Chart from "../Chart";
 import sidebarbg from "../../images/sidebarbg.jpg";
 // CSS
 import "../../css/master.css";
-import styled from "styled-components";
+import {Holder,Heading,Span,Hr} from "../dark-mode/styles";
 
-const Holder = styled.body`
-  background-color: ${(props) => props.theme.body} !important;
-  color: ${(props) => props.theme.text} !important;
-`;
-const Heading =styled.h1`
-  color: ${(props) => props.theme.text} !important;
-`;
+
 class About extends React.Component {
   constructor() {
     super();
@@ -76,22 +70,32 @@ class About extends React.Component {
       console.log("theme elements :", this.props.theme.body);
     } else {
       this.props.handleChange("light");
-    }
-    
+    } 
   };
   render() {
     return (
       <Holder>
         <div className="about">
           <div className="header">
-            {/* <Header as="h1" dividing> */}
+            <Header as="h1" >
               <Heading>
-                About
-              </Heading>
-              <Toggler/>
-            {/* </Header> */}
+                About  
+                <Toggler changeTheme={this.changeTheme} />
+              </Heading> 
+            </Header>
+            <Hr/>
             {/* <button onClick={this.changeTheme}>change mode</button> */}
             <Segment basic className="desc">
+              I'm a 2nd year student pursuing Master's in Computer Applications
+              🎓 from Guru Gobind Singh Indraprastha University 🏛. I'm a
+              passionate learner who's always willing to learn and work across
+              technologies and domains 💡. I love to explore new technologies
+              and leverage them to solve real-life problems ✨. Apart from that
+              I also love to guide and mentor newbies 👨🏻‍💻. I'm currently into Web
+              Development 🕸️ and working on my Data Structures and Algorithms
+              skills🤓.
+              <br/>
+              <br/>
               I'm a 2nd year student pursuing Master's in Computer Applications
               🎓 from Guru Gobind Singh Indraprastha University 🏛. I'm a
               passionate learner who's always willing to learn and work across

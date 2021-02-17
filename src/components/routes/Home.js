@@ -1,9 +1,24 @@
 import React from "react";
-import { Card, Grid, Header, Icon } from "semantic-ui-react";
+import { Grid, Header, Icon, Item, Segment } from "semantic-ui-react";
 import Chart from "../Chart";
+// Styles
+import {
+  Holder,
+  Heading,
+  Span,
+  Hr,
+  Card,
+  CardText,
+  CardHeader,
+  CardSubHeader,
+  CardIcon,
+} from "../dark-mode/styles";
+// dark mode toggler
+import Toggler from "../dark-mode/Toggler";
+
 class Home extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       chartData: {},
     };
@@ -14,11 +29,11 @@ class Home extends React.Component {
   getChartData() {
     this.setState({
       chartData: {
-        labels: ["","Javascript", "HTML", "CSS"],
+        labels: ["", "Javascript", "HTML", "CSS"],
         datasets: [
           {
             label: "Most used languages",
-            data: [0,13, 12, 15],
+            data: [0, 13, 12, 15],
             backgroundColor: [
               "rgba(255, 99, 132, 0.6)",
               "rgba(54, 162, 235, 0.6)",
@@ -33,53 +48,106 @@ class Home extends React.Component {
       },
     });
   }
+  changeTheme = () => {
+    if (this.props.theme.name === "light") {
+      console.log("theme is : ", this.props.theme);
+      this.props.handleChange("dark");
+      console.log("theme elements :", this.props.theme.body);
+    } else {
+      this.props.handleChange("light");
+    }
+  };
   render() {
     return (
-      <div className="home">
-        <div className="header">
-          <Header as="h1" dividing>
-            Projects
-          </Header>
-          
-        </div>
-        {/* <hr/> */}
-        <Card.Group>
-          <Card fluid raised color="red">
-            <Card.Content>
-              <Grid columns={2} stackable>
-                <Grid.Column width={10}>
-                  <Card.Header>Project 01</Card.Header>
-                  <Card.Meta>Jun2020-July2020</Card.Meta>
-                  <Card.Description>
-                    Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                    Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                    Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                    Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                    Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+      <Holder>
+        <div className="home">
+          <div className="header">
+            <Header as="h1">
+              <Heading>
+                Project
+                <Toggler changeTheme={this.changeTheme} />
+              </Heading>
+            </Header>
+            <Hr />
+          </div>
+          {/* <hr/> */}
+
+          <Card raised color="blue">
+            <Item.Group divided>
+              <Item>
+                <Item.Content>
+                  <CardHeader>
+                    <Item.Header>Project 01</Item.Header>
+                  </CardHeader>
+                  <Item.Meta>
+                    <CardSubHeader>Jun2020-July2020</CardSubHeader>
+                  </Item.Meta>
+                  <Item.Description>
+                    <CardText>
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                    </CardText>
                     <div className="icons">
-                      <a href="https://github.com/ritik307">
-                        <Icon name="github" style={{ color: "black" }}></Icon>
+                      <a href="https://github.com/Samridhi-98">
+                        <CardIcon name="github"></CardIcon>
                       </a>
-                      <a href="https://www.linkedin.com/in/ritik-rawal-698a18142/">
-                        <Icon name="globe" style={{ color: "black" }}></Icon>
+                      <a href="https://www.linkedin.com/in/samridhi-agrawal-1713201ab/">
+                        <CardIcon name="globe"></CardIcon>
                       </a>
                     </div>
-                  </Card.Description>
-                </Grid.Column>
-                <Grid.Column width={6}>
-                  <Chart
-                    className="chart"
-                    type='1'
-                    chartData={this.state.chartData}
-                    displayTitle={false}
-                  />
-                </Grid.Column>
-              </Grid>
-            </Card.Content>
+                  </Item.Description>
+                </Item.Content>
+                <Chart
+                  className="chart"
+                  type="1"
+                  chartData={this.state.chartData}
+                  displayTitle={false}
+                />
+              </Item>
+            </Item.Group>
           </Card>
-          
-        </Card.Group>
-      </div>
+          <Card raised color="blue">
+            <Item.Group divided>
+              <Item>
+                <Item.Content>
+                  <CardHeader>
+                    <Item.Header>Project 02</Item.Header>
+                  </CardHeader>
+                  <Item.Meta>
+                    <CardSubHeader>Jun2020-July2020</CardSubHeader>
+                  </Item.Meta>
+                  <Item.Description>
+                    <CardText>
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                    </CardText>
+                    <div className="icons">
+                      <a href="https://github.com/Samridhi-98">
+                        <CardIcon name="github"></CardIcon>
+                      </a>
+                      <a href="https://www.linkedin.com/in/samridhi-agrawal-1713201ab/">
+                        <CardIcon name="globe"></CardIcon>
+                      </a>
+                    </div>
+                  </Item.Description>
+                </Item.Content>
+                <Chart
+                  className="chart"
+                  type="1"
+                  chartData={this.state.chartData}
+                  displayTitle={false}
+                />
+              </Item>
+            </Item.Group>
+          </Card>
+        </div>
+      </Holder>
     );
   }
 }

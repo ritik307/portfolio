@@ -13,6 +13,8 @@ import {
   CardSubHeader,
   CardIcon,
 } from "../dark-mode/styles";
+// navbar
+import Navbar from "../navbar/Navbar";
 // dark mode toggler
 import Toggler from "../dark-mode/Toggler";
 
@@ -59,95 +61,98 @@ class Home extends React.Component {
   };
   render() {
     return (
-      <Holder>
-        <div className="home">
-          <div className="header">
-            <Header as="h1">
-              <Heading>
-                Project
-                <Toggler changeTheme={this.changeTheme} />
-              </Heading>
-            </Header>
-            <Hr />
-          </div>
-          {/* <hr/> */}
+      <div>
+        <Navbar />
+        <Holder>
+          <div className="home">
+            <div className="header">
+              <Header as="h1">
+                <Heading>
+                  Project
+                  <Toggler changeTheme={this.changeTheme} />
+                </Heading>
+              </Header>
+              <Hr />
+            </div>
+            {/* <hr/> */}
 
-          <Card raised color="blue">
-            <Item.Group divided>
-              <Item>
-                <Item.Content>
-                  <CardHeader>
-                    <Item.Header>Project 01</Item.Header>
-                  </CardHeader>
-                  <Item.Meta>
-                    <CardSubHeader>Jun2020-July2020</CardSubHeader>
-                  </Item.Meta>
-                  <Item.Description>
-                    <CardText>
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                    </CardText>
-                    <div className="icons">
-                      <a href="https://github.com/Samridhi-98">
-                        <CardIcon name="github"></CardIcon>
-                      </a>
-                      <a href="https://www.linkedin.com/in/samridhi-agrawal-1713201ab/">
-                        <CardIcon name="globe"></CardIcon>
-                      </a>
-                    </div>
-                  </Item.Description>
-                </Item.Content>
-                <Chart
-                  className="chart"
-                  type="1"
-                  chartData={this.state.chartData}
-                  displayTitle={false}
-                />
-              </Item>
-            </Item.Group>
-          </Card>
-          <Card raised color="blue">
-            <Item.Group divided>
-              <Item>
-                <Item.Content>
-                  <CardHeader>
-                    <Item.Header>Project 02</Item.Header>
-                  </CardHeader>
-                  <Item.Meta>
-                    <CardSubHeader>Jun2020-July2020</CardSubHeader>
-                  </Item.Meta>
-                  <Item.Description>
-                    <CardText>
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                    </CardText>
-                    <div className="icons">
-                      <a href="https://github.com/Samridhi-98">
-                        <CardIcon name="github"></CardIcon>
-                      </a>
-                      <a href="https://www.linkedin.com/in/samridhi-agrawal-1713201ab/">
-                        <CardIcon name="globe"></CardIcon>
-                      </a>
-                    </div>
-                  </Item.Description>
-                </Item.Content>
-                <Chart
-                  className="chart"
-                  type="1"
-                  chartData={this.state.chartData}
-                  displayTitle={false}
-                />
-              </Item>
-            </Item.Group>
-          </Card>
-        </div>
-      </Holder>
+            <Card raised color="blue">
+              <Item.Group divided>
+                <Item>
+                  <Item.Content>
+                    <CardHeader>
+                      <Item.Header>Project 01</Item.Header>
+                    </CardHeader>
+                    <Item.Meta>
+                      <CardSubHeader>Jun2020-July2020</CardSubHeader>
+                    </Item.Meta>
+                    <Item.Description>
+                      <CardText>
+                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                      </CardText>
+                      <div className="icons">
+                        <a href="https://github.com/Samridhi-98">
+                          <CardIcon name="github"></CardIcon>
+                        </a>
+                        <a href="https://www.linkedin.com/in/samridhi-agrawal-1713201ab/">
+                          <CardIcon name="globe"></CardIcon>
+                        </a>
+                      </div>
+                    </Item.Description>
+                  </Item.Content>
+                  <Chart
+                    className="chart"
+                    type="1"
+                    chartData={this.state.chartData}
+                    displayTitle={false}
+                  />
+                </Item>
+              </Item.Group>
+            </Card>
+            <Card raised color="blue">
+              <Item.Group divided>
+                <Item>
+                  <Item.Content>
+                    <CardHeader>
+                      <Item.Header>Project 02</Item.Header>
+                    </CardHeader>
+                    <Item.Meta>
+                      <CardSubHeader>Jun2020-July2020</CardSubHeader>
+                    </Item.Meta>
+                    <Item.Description>
+                      <CardText>
+                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                      </CardText>
+                      <div className="icons">
+                        <a href="https://github.com/Samridhi-98">
+                          <CardIcon name="github"></CardIcon>
+                        </a>
+                        <a href="https://www.linkedin.com/in/samridhi-agrawal-1713201ab/">
+                          <CardIcon name="globe"></CardIcon>
+                        </a>
+                      </div>
+                    </Item.Description>
+                  </Item.Content>
+                  <Chart
+                    className="chart"
+                    type="1"
+                    chartData={this.state.chartData}
+                    displayTitle={false}
+                  />
+                </Item>
+              </Item.Group>
+            </Card>
+          </div>
+        </Holder>
+      </div>
     );
   }
 }

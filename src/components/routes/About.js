@@ -1,15 +1,23 @@
 import React from "react";
-import { Card, Container, Divider, Grid, Header, Segment } from "semantic-ui-react";
+import {
+  Card,
+  Container,
+  Divider,
+  Grid,
+  Header,
+  Segment,
+} from "semantic-ui-react";
 // dark mode toggler
 import Toggler from "../dark-mode/Toggler";
 // chart.js
 import Chart from "../Chart";
+// navbar
+import Navbar from "../navbar/Navbar";
 // Image
 import sidebarbg from "../../images/sidebarbg.jpg";
 // CSS
 import "../../css/master.css";
-import {Holder,Heading,Span,Hr} from "../dark-mode/styles";
-
+import { Holder, Heading, Span, Hr } from "../dark-mode/styles";
 
 class About extends React.Component {
   constructor() {
@@ -17,7 +25,6 @@ class About extends React.Component {
     this.state = {
       chartData1: {},
       chartData2: {},
-      
     };
   }
   componentWillMount() {
@@ -70,20 +77,21 @@ class About extends React.Component {
       console.log("theme elements :", this.props.theme.body);
     } else {
       this.props.handleChange("light");
-    } 
+    }
   };
   render() {
     return (
       <Holder>
+        <Navbar />
         <div className="about">
           <div className="header">
-            <Header as="h1" >
+            <Header as="h1">
               <Heading>
-                About  
+                About
                 <Toggler changeTheme={this.changeTheme} />
-              </Heading> 
+              </Heading>
             </Header>
-            <Hr/>
+            <Hr />
             {/* <button onClick={this.changeTheme}>change mode</button> */}
             <Segment basic className="desc">
               I'm a 2nd year student pursuing Master's in Computer Applications
@@ -94,8 +102,8 @@ class About extends React.Component {
               I also love to guide and mentor newbies 👨🏻‍💻. I'm currently into Web
               Development 🕸️ and working on my Data Structures and Algorithms
               skills🤓.
-              <br/>
-              <br/>
+              <br />
+              <br />
               I'm a 2nd year student pursuing Master's in Computer Applications
               🎓 from Guru Gobind Singh Indraprastha University 🏛. I'm a
               passionate learner who's always willing to learn and work across
@@ -126,6 +134,7 @@ class About extends React.Component {
           </div>
         </div>
       </Holder>
+
       // {/* </Sidebar> */}
     );
   }

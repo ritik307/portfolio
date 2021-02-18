@@ -12,7 +12,14 @@ import {
   CardHeader,
   CardSubHeader,
   CardIcon,
+  CompFooter,
+  MobFooter,
+  FooterLink,
 } from "../dark-mode/styles";
+
+// icons
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { IconContext } from "react-icons";
 // navbar
 import Navbar from "../navbar/Navbar";
 // dark mode toggler
@@ -61,99 +68,102 @@ class Workx extends React.Component {
   };
   render() {
     return (
-      
-        
-        <Holder>
-          <Navbar />
-          <div className="home">
-            <div className="header">
-              <Header as="h1">
-                <Heading>
-                  Work Experience/Achievement
-                  <Toggler changeTheme={this.changeTheme} />
-                </Heading>
-              </Header>
-              <Hr />
-            </div>
-            {/* <hr/> */}
-
-            <Card raised color="blue">
-              <Item.Group divided>
-                <Item>
-                  <Item.Content>
-                    <CardHeader>
-                      <Item.Header>Intership 1</Item.Header>
-                    </CardHeader>
-                    <Item.Meta>
-                      <CardSubHeader>Jun2020-July2020</CardSubHeader>
-                    </Item.Meta>
-                    <Item.Description>
-                      <CardText>
-                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                      </CardText>
-                      <div className="icons">
-                        <a href="https://github.com/Samridhi-98">
-                          <CardIcon name="github"></CardIcon>
-                        </a>
-                        <a href="https://www.linkedin.com/in/samridhi-agrawal-1713201ab/">
-                          <CardIcon name="globe"></CardIcon>
-                        </a>
-                      </div>
-                    </Item.Description>
-                  </Item.Content>
-                  <Chart
-                    className="chart"
-                    type="1"
-                    chartData={this.state.chartData}
-                    displayTitle={false}
-                  />
-                </Item>
-              </Item.Group>
-            </Card>
-            <Card raised color="blue">
-              <Item.Group divided>
-                <Item>
-                  <Item.Content>
-                    <CardHeader>
-                      <Item.Header>Intership 2</Item.Header>
-                    </CardHeader>
-                    <Item.Meta>
-                      <CardSubHeader>Jun2020-July2020</CardSubHeader>
-                    </Item.Meta>
-                    <Item.Description>
-                      <CardText>
-                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                        Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                      </CardText>
-                      <div className="icons">
-                        <a href="https://github.com/Samridhi-98">
-                          <CardIcon name="github"></CardIcon>
-                        </a>
-                        <a href="https://www.linkedin.com/in/samridhi-agrawal-1713201ab/">
-                          <CardIcon name="globe"></CardIcon>
-                        </a>
-                      </div>
-                    </Item.Description>
-                  </Item.Content>
-                  <Chart
-                    className="chart"
-                    type="1"
-                    chartData={this.state.chartData}
-                    displayTitle={false}
-                  />
-                </Item>
-              </Item.Group>
-            </Card>
+      <Holder>
+        <div className="home">
+          <div className="header">
+            <Header as="h1">
+              <Heading>
+                Work Experience
+                <Toggler changeTheme={this.changeTheme} />
+              </Heading>
+            </Header>
+            <Hr />
           </div>
-        </Holder>
+          {/* <hr/> */}
 
+          <Card raised color="blue">
+            <Item.Group divided>
+              <Item>
+                <Item.Content>
+                  <CardHeader>
+                    <Item.Header>Intership 1</Item.Header>
+                  </CardHeader>
+                  <Item.Meta>
+                    <CardSubHeader>Jun2020-July2020</CardSubHeader>
+                  </Item.Meta>
+                  <Item.Description>
+                    <CardText>
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                    </CardText>
+                    <div className="icons">
+                      <a href="https://github.com/Samridhi-98">
+                        <CardIcon name="github"></CardIcon>
+                      </a>
+                      <a href="https://www.linkedin.com/in/samridhi-agrawal-1713201ab/">
+                        <CardIcon name="globe"></CardIcon>
+                      </a>
+                    </div>
+                  </Item.Description>
+                </Item.Content>
+              </Item>
+            </Item.Group>
+          </Card>
+          <Card raised color="blue">
+            <Item.Group divided>
+              <Item>
+                <Item.Content>
+                  <CardHeader>
+                    <Item.Header>Intership 2</Item.Header>
+                  </CardHeader>
+                  <Item.Meta>
+                    <CardSubHeader>Jun2020-July2020</CardSubHeader>
+                  </Item.Meta>
+                  <Item.Description>
+                    <CardText>
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
+                    </CardText>
+                    <div className="icons">
+                      <a href="https://github.com/Samridhi-98">
+                        <CardIcon name="github"></CardIcon>
+                      </a>
+                      <a href="https://www.linkedin.com/in/samridhi-agrawal-1713201ab/">
+                        <CardIcon name="globe"></CardIcon>
+                      </a>
+                    </div>
+                  </Item.Description>
+                </Item.Content>
+              </Item>
+            </Item.Group>
+          </Card>
+          <CompFooter>Made with ❤️ by Ritik</CompFooter>
+          <MobFooter>
+            <FooterLink href="https://github.com/ritik307">
+              <IconContext.Provider value={{ className: "ico1" }}>
+                <FaGithub />
+              </IconContext.Provider>
+            </FooterLink>
+            <FooterLink href="https://www.linkedin.com/in/ritik-rawal-698a18142/">
+              <IconContext.Provider value={{ className: "ico1" }}>
+                <FaLinkedin />
+              </IconContext.Provider>
+            </FooterLink>
+            <FooterLink href="https://twitter.com/realwolf307">
+              <IconContext.Provider value={{ className: "ico1" }}>
+                <FaTwitter />
+              </IconContext.Provider>
+            </FooterLink>
+          </MobFooter>
+        </div>
+        <Navbar />
+      </Holder>
     );
   }
 }

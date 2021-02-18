@@ -7,6 +7,9 @@ import {
   Header,
   Segment,
 } from "semantic-ui-react";
+// icons
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { IconContext } from "react-icons";
 // dark mode toggler
 import Toggler from "../dark-mode/Toggler";
 // chart.js
@@ -17,7 +20,15 @@ import Navbar from "../navbar/Navbar";
 import sidebarbg from "../../images/sidebarbg.jpg";
 // CSS
 import "../../css/master.css";
-import { Holder, Heading, Span, Hr } from "../dark-mode/styles";
+import {
+  Holder,
+  Heading,
+  Span,
+  Hr,
+  CompFooter,
+  MobFooter,
+  FooterLink,
+} from "../dark-mode/styles";
 
 class About extends React.Component {
   constructor() {
@@ -82,7 +93,6 @@ class About extends React.Component {
   render() {
     return (
       <Holder>
-        <Navbar />
         <div className="about">
           <div className="header">
             <Header as="h1">
@@ -132,7 +142,27 @@ class About extends React.Component {
               </Grid.Column>
             </Grid>
           </div>
+          <CompFooter>Made with ❤️ by Ritik</CompFooter>
+          <MobFooter>
+            <FooterLink href="https://github.com/ritik307">
+              <IconContext.Provider value={{ className: "ico1" }}>
+                <FaGithub />
+              </IconContext.Provider>
+            </FooterLink>
+            <FooterLink href="https://www.linkedin.com/in/ritik-rawal-698a18142/">
+              <IconContext.Provider value={{ className: "ico1" }}>
+                <FaLinkedin />
+              </IconContext.Provider>
+            </FooterLink>
+            <FooterLink href="https://twitter.com/realwolf307">
+              <IconContext.Provider value={{ className: "ico1" }}>
+                <FaTwitter />
+              </IconContext.Provider>
+            </FooterLink>
+          </MobFooter>
         </div>
+
+        <Navbar />
       </Holder>
 
       // {/* </Sidebar> */}

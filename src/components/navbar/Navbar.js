@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import { Menu } from "semantic-ui-react";
-import styled from "styled-components";
+import {NavStyle,NavBarMenu,IconLink} from "./styles.js"
 // icons
 import {
   FaGithub,
@@ -16,36 +16,43 @@ import {
 //CSS
 import "../../css/master.css";
 //Icons
-import { RiOpenSourceFill, RiMailStarFill } from "react-icons/ri";
+import { RiOpenSourceFill} from "react-icons/ri";
+import { BsThreeDots } from "react-icons/bs";
 import { IconContext } from "react-icons";
-const NoComputerDiv = styled.div`
-  @media (min-width: 800px) {
-    display: none !important;
-  }
-`;
+
+
 
 class Navbar extends React.Component {
-  state = {};
+  constructor(props){
+    super(props);
+    this.state = {};
+    console.log("from navbar: ",props.theme);
+  }
+  
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   render() {
     const { activeItem } = this.state;
     return (
-      <NoComputerDiv>
-        <Menu icon fixed="bottom" fluid widths={5}>
+      <NavStyle>
+        <NavBarMenu icon="labeled" fixed="bottom" fluid widths={5}>
 
           <Menu.Item
             name="project"
             active={activeItem === "project"}
             onClick={this.handleItemClick}
           >
-            <Link to="/">
+            <IconLink to="/">
               <IconContext.Provider
-                value={{ className: "ico1", size: "2em", color:"black" }}
+                value={{ className: "ico1", size: "2em" }}
               >
                 <FaCode/>
+                {/* <IconTag>
+                  Projects
+                </IconTag> */}
+                
               </IconContext.Provider>
-            </Link>
+            </IconLink>
           </Menu.Item>
 
           <Menu.Item
@@ -53,13 +60,16 @@ class Navbar extends React.Component {
             active={activeItem === "education"}
             onClick={this.handleItemClick}
           >
-            <Link to="/education">
+            <IconLink to="/education">
               <IconContext.Provider
-                value={{ className: "ico1", size: "2em", color:"black" }}
+                value={{ className: "ico1", size: "2em" }}
               >
                 <FaUserGraduate/>
+                {/* <IconTag>
+                  Education
+                </IconTag> */}
               </IconContext.Provider>
-            </Link>
+            </IconLink>
           </Menu.Item>
 
           <Menu.Item
@@ -67,13 +77,16 @@ class Navbar extends React.Component {
             active={activeItem === "workx"}
             onClick={this.handleItemClick}
           >
-            <Link to="/workx">
+            <IconLink to="/workx">
               <IconContext.Provider
-                value={{ className: "ico1", size: "2em", color:"black" }}
+                value={{ className: "ico1", size: "2em" }}
               >
                 <FaEdit/>
+                {/* <IconTag>
+                  Work Ex.
+                </IconTag> */}
               </IconContext.Provider>
-            </Link>
+            </IconLink>
           </Menu.Item>
           
           <Menu.Item
@@ -81,13 +94,16 @@ class Navbar extends React.Component {
             active={activeItem === "about"}
             onClick={this.handleItemClick}
           >
-            <Link to="/about">
+            <IconLink to="/about">
               <IconContext.Provider
-                value={{ className: "ico1", size: "2em", color:"black" }}
+                value={{ className: "ico1", size: "2em" }}
               >
                 <FaUserTie/>
+                {/* <IconTag>
+                  About
+                </IconTag> */}
               </IconContext.Provider>
-            </Link>
+            </IconLink>
           </Menu.Item>
 
           <Menu.Item
@@ -95,18 +111,20 @@ class Navbar extends React.Component {
             active={activeItem === "contribution"}
             onClick={this.handleItemClick}
           >
-            <Link to="/contribution">
+            <IconLink to="/contribution">
               <IconContext.Provider
-                value={{ className: "ico1", size: "2em", color:"black" }}
+                value={{ className: "ico1", size: "2em" }}
               >
                 <RiOpenSourceFill/>
+                {/* <IconTag>
+                  Contribution
+                </IconTag> */}
               </IconContext.Provider>
-            </Link>
+            </IconLink>
           </Menu.Item>
 
-          
-        </Menu>
-      </NoComputerDiv>
+        </NavBarMenu>
+      </NavStyle>
     );
   }
 }

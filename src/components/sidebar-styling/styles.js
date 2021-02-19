@@ -11,6 +11,7 @@ export const styles = {
       overflow: "hidden",
     },
     sidebar: {
+      
       width: 500,
       height: "100%",
       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.6)),url(${sidebarbg2})`,
@@ -36,6 +37,7 @@ export const styles = {
     },
     dragHandle: {
       zIndex: 1,
+      
       position: "fixed",
       top: 0,
       bottom: 0,

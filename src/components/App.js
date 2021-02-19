@@ -24,7 +24,7 @@ const themes = {
   light: LightTheme,
 };
 
-const mql = window.matchMedia(`(min-width: 800px)`);
+const mql = window.matchMedia(`(min-width: 991px)`);
 
 class App extends React.Component {
   // Sidebar content
@@ -133,11 +133,7 @@ class App extends React.Component {
                 )}
               />
             </Sidebar>
-        
-
-            
           </Router>
-        
       </ThemeProvider>
     );
   }

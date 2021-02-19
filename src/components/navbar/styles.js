@@ -4,7 +4,7 @@ import { Menu } from "semantic-ui-react";
 
 export const NavStyle = styled.div`
   margin-bottom:20vh !important;
-  @media (min-width: 800px) {
+  @media (min-width: 991px) {
     display: none !important;
   }
 

@@ -34,7 +34,7 @@ export const CardIcon = styled(Icon)`
   color: ${(props) => props.theme.text} !important;
 `;
 export const NoComputerImg = styled(Image)`
-  @media (max-width: 800px) {
+  @media (max-width:  991px) {
     display: none !important;
   }
 `;
@@ -45,7 +45,7 @@ export const CompFooter = styled.footer`
   margin-bottom: 5vh !important;
   text-align: center !important;
 
-  @media (max-width: 800px) {
+  @media (max-width:  991px) {
     display: none !important;
   }
 `;
@@ -56,7 +56,7 @@ export const MobFooter = styled.footer`
   margin-bottom: 5vh !important;
   text-align: center !important;
 
-  @media (min-width: 800px) {
+  @media (min-width:  991px) {
     display: none !important;
   }
 `;

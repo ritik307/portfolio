@@ -1,27 +1,23 @@
 import React from "react";
-import { Grid, Header, Icon, Item, Segment } from "semantic-ui-react";
+import { Header, Item, } from "semantic-ui-react";
 import Chart from "../Chart";
 // Styles
 import {
   Holder,
   Heading,
-  Span,
   Hr,
   Card,
   CardText,
   CardHeader,
   CardSubHeader,
   CardIcon,
-  CompFooter,
-  MobFooter,
-  FooterLink,
 } from "../dark-mode/styles";
 
-// icons
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { IconContext } from "react-icons";
+
 // navbar
 import Navbar from "../navbar/Navbar";
+// footer
+import Footer from  "../dark-mode/Footer";
 // dark mode toggler
 import Toggler from "../dark-mode/Toggler";
 
@@ -143,26 +139,9 @@ class Workx extends React.Component {
               </Item>
             </Item.Group>
           </Card>
-          <CompFooter>Made with ❤️ by Ritik</CompFooter>
-          <MobFooter>
-            <FooterLink href="https://github.com/ritik307">
-              <IconContext.Provider value={{ className: "ico1" }}>
-                <FaGithub />
-              </IconContext.Provider>
-            </FooterLink>
-            <FooterLink href="https://www.linkedin.com/in/ritik-rawal-698a18142/">
-              <IconContext.Provider value={{ className: "ico1" }}>
-                <FaLinkedin />
-              </IconContext.Provider>
-            </FooterLink>
-            <FooterLink href="https://twitter.com/realwolf307">
-              <IconContext.Provider value={{ className: "ico1" }}>
-                <FaTwitter />
-              </IconContext.Provider>
-            </FooterLink>
-          </MobFooter>
+          <Footer/>
         </div>
-        <Navbar />
+        <Navbar theme={this.props.theme}/>
       </Holder>
     );
   }

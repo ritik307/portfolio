@@ -20,39 +20,70 @@ import Navbar from "../navbar/Navbar";
 import Footer from  "../dark-mode/Footer";
 // dark mode toggler
 import Toggler from "../dark-mode/Toggler";
+// custom styling
+import { NoComputerImg } from "../dark-mode/styles";
+// images
+import gssoc from "../../images/internship/gssoc.png";
+import postman from "../../images/internship/postman.png";
+import sparkfoundation from "../../images/internship/sparkfoundation.png";
+import quilinx from "../../images/internship/quilinx.jpg";
+import shelteraction from "../../images/internship/shelter1.png";
 
 class Workx extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      chartData: {},
+      images:[gssoc,postman,sparkfoundation,quilinx,shelteraction],
+      workData: [
+        {
+          id: 0,
+          name: "GirlScript Summer of Code",
+          date: "Jan 2020-Feb 2020",
+          desc:
+            "I have been selected as a participant in GSSoC'21.Looking forward to contribute in open source.",
+          
+          site: "https://gssoc.girlscript.tech/",
+        },
+        {
+          id: 1,
+          name: "Postman Student Expert",
+          date: "Jan 2020-Feb 2020",
+          desc:
+            "Successfully completed the student expert program provided by Postman for API building and testing.",
+          
+          site: "https://www.postman.com/",
+        },
+        {
+          id: 2,
+          name: "Spark Foundation",
+          date: "Jan 2020-Feb 2020",
+          desc:
+            "Build a banking application the keeps the record of a perticular user's transaction records.",
+          
+          site: " https://www.thesparksfoundationsingapore.org/",
+        },
+        {
+          id: 3,
+          name: "Quilinx",
+          date: "Oct 2020-Dec 2020",
+          desc:
+            "Worked on the web application that provides a platform on reporting the act of cyber bullying in schools and in colleges.",
+          
+          site: " https://quilinx.in/ ",
+        },
+        {
+          id: 4,
+          name: "Cocogreen",
+          date: "June 2020-Jul 2020",
+          desc:
+            "Build a website for charitable organisation(Shelter Action) that provide cheap and affordable housing to labourers in southern part of India.",
+          site: "https://shelter-action.web.app/",
+        },
+      ],
     };
   }
-  componentWillMount() {
-    this.getChartData();
-  }
-  getChartData() {
-    this.setState({
-      chartData: {
-        labels: ["", "Javascript", "HTML", "CSS"],
-        datasets: [
-          {
-            label: "Most used languages",
-            data: [0, 13, 12, 15],
-            backgroundColor: [
-              "rgba(255, 99, 132, 0.6)",
-              "rgba(54, 162, 235, 0.6)",
-              "rgba(255, 206, 86, 0.6)",
-              "rgba(75, 192, 192, 0.6)",
-              "rgba(153, 102, 255, 0.6)",
-              "rgba(255, 159, 64, 0.6)",
-              "rgba(255, 99, 132, 0.6)",
-            ],
-          },
-        ],
-      },
-    });
-  }
+  
+  
   changeTheme = () => {
     if (this.props.theme.name === "light") {
       console.log("theme is : ", this.props.theme);
@@ -63,6 +94,36 @@ class Workx extends React.Component {
     }
   };
   render() {
+    const cardList = this.state.workData.map((data) => {
+      return (
+        <Card raised color="blue">
+          <Item.Group divided>
+            <Item>
+              <Item.Content>
+                <CardHeader>
+                  <Item.Header>{data.name}</Item.Header>
+                </CardHeader>
+                <Item.Meta>
+                  {/* <CardSubHeader>Jun2020-July2020</CardSubHeader> */}
+                </Item.Meta>
+                <Item.Description>
+                  <CardText>
+                    {data.desc}
+                  </CardText>
+                  {/* <div className="icons">
+                    
+                    <a href={data.site}>
+                      <CardIcon name="globe"></CardIcon>
+                    </a>
+                  </div> */}
+                </Item.Description>
+              </Item.Content>
+              <NoComputerImg size="tiny" src={this.state.images[data.id]}></NoComputerImg>
+            </Item>
+          </Item.Group>
+        </Card>
+      );
+    });
     return (
       <Holder>
         <div className="home">
@@ -77,68 +138,8 @@ class Workx extends React.Component {
           </div>
           {/* <hr/> */}
 
-          <Card raised color="blue">
-            <Item.Group divided>
-              <Item>
-                <Item.Content>
-                  <CardHeader>
-                    <Item.Header>Intership 1</Item.Header>
-                  </CardHeader>
-                  <Item.Meta>
-                    <CardSubHeader>Jun2020-July2020</CardSubHeader>
-                  </Item.Meta>
-                  <Item.Description>
-                    <CardText>
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                    </CardText>
-                    <div className="icons">
-                      <a href="https://github.com/Samridhi-98">
-                        <CardIcon name="github"></CardIcon>
-                      </a>
-                      <a href="https://www.linkedin.com/in/samridhi-agrawal-1713201ab/">
-                        <CardIcon name="globe"></CardIcon>
-                      </a>
-                    </div>
-                  </Item.Description>
-                </Item.Content>
-              </Item>
-            </Item.Group>
-          </Card>
-          <Card raised color="blue">
-            <Item.Group divided>
-              <Item>
-                <Item.Content>
-                  <CardHeader>
-                    <Item.Header>Intership 2</Item.Header>
-                  </CardHeader>
-                  <Item.Meta>
-                    <CardSubHeader>Jun2020-July2020</CardSubHeader>
-                  </Item.Meta>
-                  <Item.Description>
-                    <CardText>
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                      Loremipsum Loremipsum Loremipsum Loremipsum Loremipsum
-                    </CardText>
-                    <div className="icons">
-                      <a href="https://github.com/Samridhi-98">
-                        <CardIcon name="github"></CardIcon>
-                      </a>
-                      <a href="https://www.linkedin.com/in/samridhi-agrawal-1713201ab/">
-                        <CardIcon name="globe"></CardIcon>
-                      </a>
-                    </div>
-                  </Item.Description>
-                </Item.Content>
-              </Item>
-            </Item.Group>
-          </Card>
+          {cardList}
+          
           <Footer/>
         </div>
         <Navbar theme={this.props.theme}/>

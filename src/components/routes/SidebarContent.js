@@ -82,7 +82,7 @@ class SidebarContent extends React.Component {
           <a href="https://github.com/ritik307">
             <IconContext.Provider value={{ className: "ico1" }}>
               <Popup
-                content="Github"
+                content="ritik307"
                 size="mini"
                 position="bottom center"
                 trigger={<FaGithub />}
@@ -92,7 +92,7 @@ class SidebarContent extends React.Component {
           <a href="https://www.linkedin.com/in/ritik-rawal-698a18142/">
             <IconContext.Provider value={{ className: "ico1" }}>
               <Popup
-                content="Linkedin"
+                content="Ritik Rawal"
                 size="mini"
                 position="bottom center"
                 trigger={<FaLinkedin />}
@@ -102,7 +102,7 @@ class SidebarContent extends React.Component {
           <a href="https://twitter.com/realwolf307">
             <IconContext.Provider value={{ className: "ico1" }}>
               <Popup
-                content="Twitter"
+                content="@ritikhere307"
                 size="mini"
                 position="bottom center"
                 trigger={<FaTwitter />}
@@ -121,6 +121,16 @@ class SidebarContent extends React.Component {
                 size="mini"
                 position="bottom center"
                 trigger={<FaCode />}
+              />
+            </IconContext.Provider>
+          </Link>
+          <Link to="/contribution">
+            <IconContext.Provider value={{ className: "ico1", size: "1.2em" }}>
+              <Popup
+                content="OpenSource "
+                size="mini"
+                position="bottom center"
+                trigger={<RiOpenSourceFill />}
               />
             </IconContext.Provider>
           </Link>
@@ -155,16 +165,7 @@ class SidebarContent extends React.Component {
               />
             </IconContext.Provider>
           </Link>
-          <Link to="/contribution">
-            <IconContext.Provider value={{ className: "ico1", size: "1.2em" }}>
-              <Popup
-                content="OpenSource "
-                size="mini"
-                position="bottom center"
-                trigger={<RiOpenSourceFill />}
-              />
-            </IconContext.Provider>
-          </Link>
+          
           {/* <br/> */}
           <a href="mailto:ritikpr307@gmail.com">
             <IconContext.Provider value={{ className: "ico1", size: "1.2em" }}>

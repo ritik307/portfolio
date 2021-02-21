@@ -28,7 +28,8 @@ export const CardHeader = styled.h2`
   color: ${(props) => props.theme.text} !important;
 `;
 export const CardSubHeader = styled.h4`
-  color: ${(props) => props.theme.text} !important;
+  color: ${(props) => props.theme.footer} !important;
+  margin-top:  0.2em !important;
 `;
 export const CardIcon = styled(Icon)`
   color: ${(props) => props.theme.text} !important;
@@ -41,8 +42,8 @@ export const NoComputerImg = styled(Image)`
 export const CompFooter = styled.footer`
   color: ${(props) => props.theme.footer} !important;
   font-size: 2.5vh !important;
-  margin-top: 7vh !important;
-  margin-bottom: 5vh !important;
+  margin-top: 6vh !important;
+  margin-bottom: 1vh !important;
   text-align: center !important;
 
   @media (max-width:  991px) {
@@ -64,4 +65,8 @@ export const FooterLink = styled.a`
   color: ${(props) => props.theme.footer} !important;
   padding-left: 2vh !important;
   padding-right: 2vh !important;
+`;
+export const SideHeader = styled.em`
+    font-size: 20px !important;
+    margin-left: 0.5em !important;
 `;

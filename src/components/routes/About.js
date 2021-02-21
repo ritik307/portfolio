@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  
-  Grid,
-  Header,
-  Segment,
-} from "semantic-ui-react";
+import { Grid, Header, Segment } from "semantic-ui-react";
 
 // dark mode toggler
 import Toggler from "../dark-mode/Toggler";
@@ -13,16 +8,10 @@ import Chart from "../Chart";
 // navbar
 import Navbar from "../navbar/Navbar";
 // footer
-import Footer from  "../dark-mode/Footer";
+import Footer from "../dark-mode/Footer";
 // CSS
 import "../../css/master.css";
-import {
-  Holder,
-  Heading,
-  Span,
-  Hr,
-
-} from "../dark-mode/styles";
+import { Holder, Heading, Span, Hr } from "../dark-mode/styles";
 
 class About extends React.Component {
   constructor() {
@@ -99,23 +88,17 @@ class About extends React.Component {
             {/* <button onClick={this.changeTheme}>change mode</button> */}
             <Segment basic className="desc">
               I'm a 2nd year student pursuing Master's in Computer Applications
-              🎓 from Guru Gobind Singh Indraprastha University 🏛. I'm a
-              passionate learner who's always willing to learn and work across
-              technologies and domains 💡. I love to explore new technologies
-              and leverage them to solve real-life problems ✨. Apart from that
-              I also love to guide and mentor newbies 👨🏻‍💻. I'm currently into Web
-              Development 🕸️ and working on my Data Structures and Algorithms
-              skills🤓.
+              from GGSIPU. I'm a passionate learner who's always willing to
+              learn and work across technologies and domains. I love to explore
+              new technologies and leverage them to solve real-life problems.
               <br />
               <br />
-              I'm a 2nd year student pursuing Master's in Computer Applications
-              🎓 from Guru Gobind Singh Indraprastha University 🏛. I'm a
-              passionate learner who's always willing to learn and work across
-              technologies and domains 💡. I love to explore new technologies
-              and leverage them to solve real-life problems ✨. Apart from that
-              I also love to guide and mentor newbies 👨🏻‍💻. I'm currently into Web
-              Development 🕸️ and working on my Data Structures and Algorithms
-              skills🤓.
+              I'm currently into Web Development and working on my Data
+              Structures and Algorithms skills.Seeking an opportunity to pursue
+              a suitable role to upgrade , learn and adapt myself to meet the
+              requirements of a company , a competitive and challenging
+              environment where I can serve the organization and establish a
+              career for myself.
             </Segment>
           </div>
           <div>
@@ -136,10 +119,10 @@ class About extends React.Component {
               </Grid.Column>
             </Grid>
           </div>
-          <Footer/>
+          <Footer />
         </div>
 
-        <Navbar theme={this.props.theme}/>
+        <Navbar theme={this.props.theme} />
       </Holder>
 
       // {/* </Sidebar> */}

@@ -1,6 +1,6 @@
 import React from "react";
-//? {HashRouter as Router} can also be used will work the same + wont have to add "basname" 
-import { Route, BrowserRouter as Router } from "react-router-dom";
+//? BrowserRouter can also be used will work the same basename={process.env.PUBLIC_URL}" 
+import { Route, HashRouter as Router } from "react-router-dom";
 // custom
 import Home from "./routes/Home";
 import Education from "./routes/Education";

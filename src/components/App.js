@@ -73,7 +73,7 @@ class App extends React.Component {
         {console.log("themeproviders: ", themes[this.state.theme])}
 
         
-          <Router>
+          <Router basename={process.env.PUBLIC_URL}>
            
             <Sidebar
               sidebar={<SidebarContent />}
@@ -83,7 +83,7 @@ class App extends React.Component {
               onSetOpen={this.onSetSidebarOpen}
             >
               <Route
-                path="/portfolio/"
+                path="/"
                 exact
                 component={() => (
                   <Home
@@ -93,7 +93,7 @@ class App extends React.Component {
                 )}
               />
               <Route
-                path="/portfolio/education"
+                path="/education"
                 exact
                 component={() => (
                   <Education
@@ -103,7 +103,7 @@ class App extends React.Component {
                 )}
               />
               <Route
-                path="/portfolio/workx"
+                path="/workx"
                 exact
                 component={() => (
                   <Workx
@@ -113,7 +113,7 @@ class App extends React.Component {
                 )}
               />
               <Route
-                path="/portfolio/about"
+                path="/about"
                 exact
                 component={() => (
                   <About
@@ -123,7 +123,7 @@ class App extends React.Component {
                 )}
               />
               <Route
-                path="/portfolio/contribution"
+                path="/contribution"
                 exact
                 component={() => (
                   <Contribution

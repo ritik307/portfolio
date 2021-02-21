@@ -1,6 +1,6 @@
 import React from "react";
-
-import { Route, BrowserRouter as Router, Link } from "react-router-dom";
+//? {HashRouter as Router} can also be used will work the same + wont have to add "basname" 
+import { Route, BrowserRouter as Router } from "react-router-dom";
 // custom
 import Home from "./routes/Home";
 import Education from "./routes/Education";
@@ -12,12 +12,10 @@ import Sidebar from "react-sidebar";
 import SidebarContent from "./routes/SidebarContent";
 // sidebar styles
 import { styles } from "./sidebar-styling/styles";
-//local storage
-import storage from "local-storage-fallback";
+
 // styled-components
-import styled, { ThemeProvider } from "styled-components";
+import  { ThemeProvider } from "styled-components";
 import { DarkTheme, LightTheme } from "./dark-mode/Theme";
-import { Grid, GridColumn, Menu } from "semantic-ui-react";
 
 const themes = {
   dark: DarkTheme,

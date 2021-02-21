@@ -83,7 +83,7 @@ class App extends React.Component {
               onSetOpen={this.onSetSidebarOpen}
             >
               <Route
-                path="/"
+                path="portfolio/"
                 exact
                 component={() => (
                   <Home
@@ -93,7 +93,7 @@ class App extends React.Component {
                 )}
               />
               <Route
-                path="/education"
+                path="portfolio/education"
                 exact
                 component={() => (
                   <Education
@@ -103,7 +103,7 @@ class App extends React.Component {
                 )}
               />
               <Route
-                path="/workx"
+                path="portfolio/workx"
                 exact
                 component={() => (
                   <Workx
@@ -113,7 +113,7 @@ class App extends React.Component {
                 )}
               />
               <Route
-                path="/about"
+                path="portfolio/about"
                 exact
                 component={() => (
                   <About
@@ -123,7 +123,7 @@ class App extends React.Component {
                 )}
               />
               <Route
-                path="/contribution"
+                path="portfolio/contribution"
                 exact
                 component={() => (
                   <Contribution

@@ -28,7 +28,7 @@ class Home extends React.Component {
       chartData: [],
       feedData: [
         {lang1:"Javascript", lang2:"HTML", lang3:"CSS", l1: 89.9, l2: 47.9, l3: 22.2 },
-        {lang1:"Javascript", lang2:"HTML", lang3:"CSS", l1: 99.9, l2: 0, l3: 0 },
+        {lang1:"Javascript", lang2:"HTML", lang3:"CSS", l1: 99.9, l2: 20, l3: 10 },
         {lang1:"Javascript", lang2:"HTML", lang3:"CSS", l1: 83.1, l2: 39.1, l3: 15.7 },
         {lang1:"Javascript", lang2:"HTML", lang3:"CSS", l1: 61.9, l2: 30.6, l3: 7.5 },
         {lang1:"Javascript", lang2:"HTML", lang3:"CSS", l1: 28.2, l2: 85.1, l3: 16.7 },

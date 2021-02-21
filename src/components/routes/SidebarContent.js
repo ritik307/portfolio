@@ -17,15 +17,7 @@ import { IconContext } from "react-icons";
 // Typewriting effect
 import Typewriter from "typewriter-effect";
 //Semantic ui
-import {
-  Container,
-  Grid,
-  GridColumn,
-  Header,
-  Icon,
-  Image,
-  Popup,
-} from "semantic-ui-react";
+import {Header,Image,Popup,} from "semantic-ui-react";
 //CSS
 import "../../css/master.css";
 // Image

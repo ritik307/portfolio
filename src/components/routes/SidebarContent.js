@@ -26,12 +26,11 @@ import {
   Image,
   Popup,
 } from "semantic-ui-react";
-// darkmode toggler
-import DarkModeToggle from "react-dark-mode-toggle";
 //CSS
 import "../../css/master.css";
 // Image
 import profile from "../../images/profile.jpg";
+import profile1 from "../../images/me2.jpg";
 
 const NoMobileDiv = styled.div`
   @media (max-width: 800px) {
@@ -57,7 +56,7 @@ class SidebarContent extends React.Component {
       // <NoMobileDiv>
       <div className="sidebar">
         {/* <Container > */}
-        <Image src={profile} size="small" circular centered></Image>
+        <Image src={profile1} size="small" circular centered></Image>
         <Header as="h2" textAlign="center" className="header">
           Ritik Rawal
           <Header.Subheader className="header">

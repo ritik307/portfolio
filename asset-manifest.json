@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.d3026017.chunk.css",
+    "main.js": "/portfolio/static/js/main.acd8041d.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.acd8041d.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.23281e55.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.23281e55.js.map",
+    "static/js/2.1f5e2ec2.chunk.js": "/portfolio/static/js/2.1f5e2ec2.chunk.js",
+    "static/js/2.1f5e2ec2.chunk.js.map": "/portfolio/static/js/2.1f5e2ec2.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/main.d3026017.chunk.css.map": "/portfolio/static/css/main.d3026017.chunk.css.map",
+    "static/js/2.1f5e2ec2.chunk.js.LICENSE.txt": "/portfolio/static/js/2.1f5e2ec2.chunk.js.LICENSE.txt",
+    "static/media/circuitVerse1.c95ee21a.png": "/portfolio/static/media/circuitVerse1.c95ee21a.png",
+    "static/media/eddiehub2.f3ef6dd4.jpg": "/portfolio/static/media/eddiehub2.f3ef6dd4.jpg",
+    "static/media/fossasia.b8797d22.png": "/portfolio/static/media/fossasia.b8797d22.png",
+    "static/media/gssoc.46927717.png": "/portfolio/static/media/gssoc.46927717.png",
+    "static/media/hacktober.7b8cc73e.jpeg": "/portfolio/static/media/hacktober.7b8cc73e.jpeg",
+    "static/media/postman.8972c9f4.png": "/portfolio/static/media/postman.8972c9f4.png",
+    "static/media/profile.2d118531.jpg": "/portfolio/static/media/profile.2d118531.jpg",
+    "static/media/shelter1.51e2b254.png": "/portfolio/static/media/shelter1.51e2b254.png",
+    "static/media/sidebarbg2.b0a327c2.jpg": "/portfolio/static/media/sidebarbg2.b0a327c2.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.23281e55.js",
+    "static/js/2.1f5e2ec2.chunk.js",
+    "static/css/main.d3026017.chunk.css",
+    "static/js/main.acd8041d.chunk.js"
+  ]
+}

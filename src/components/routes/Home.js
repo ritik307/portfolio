@@ -103,7 +103,7 @@ class Home extends React.Component {
           ],
         },
       };
-      console.log("chartval: ", chartVal.cData);
+      
       tempArray = tempArray.concat(chartVal.cData);
     });
     console.log("temparray is : ", tempArray);

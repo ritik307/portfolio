@@ -48,7 +48,7 @@ class SidebarContent extends React.Component {
       // <NoMobileDiv>
       <div className="sidebar">
         {/* <Container > */}
-        <Image src={profile} size="small" circular centered></Image>
+        <Image src={profile1} size="small" circular centered></Image>
         <Header as="h2" textAlign="center" className="header">
           Ritik Rawal
           <Header.Subheader className="header">

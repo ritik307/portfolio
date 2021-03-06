@@ -48,7 +48,7 @@ class About extends React.Component {
         labels: ["Problem Solving", "Team Work", "Multitasking", "Adaptation"],
         datasets: [
           {
-            data: [20, 20, 20, 20],
+            data: [25, 25, 25, 25],
             backgroundColor: [
               "rgba(255, 99, 132, 0.6)",
               "rgba(54, 162, 235, 0.6)",

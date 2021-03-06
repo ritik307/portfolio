@@ -38,7 +38,7 @@ class Home extends React.Component {
         {
           id:0,
           name: "Rapid-JS",
-          date: "Oct 2020-Dec 2020",
+          date: "Feb 2021-Mar 2021",
           desc: "To overcome the problem of food wastage, Onlymeal provides a two way interaction between those with a food surplus and those looking for food. The data collected from this app includes nature of the food, date of expiry, location etc. This data when aggregated can be very useful for NGOs to connect the locations with surplus with those that are in need of the food.",
           github:"https://github.com/ritik307/Rapid-NPM-Package",
           site:" https://www.npmjs.com/package/rapid-npm-package "
@@ -73,7 +73,7 @@ class Home extends React.Component {
           date: "Apr 2020-May 2020",
           desc: "A blogging web Application that allowes user to post thier blogs. Application allows user to create their account. User can add comment to others post. Only registered users are allowed to post the content on the application. Registered users can edit/delete their post.",
           github:"https://github.com/ritik307/Paradise",
-          site:"/"
+          site:"https://github.com/ritik307/Paradise"
         },
         {
           id:5,
@@ -81,7 +81,7 @@ class Home extends React.Component {
           date: "May 2020-May 2020",
           desc: "toTheMoon is a link management platform that lets you harness the power of your links by shortening, sharing, managing and analyzing links to your content.",
           github:"https://github.com/ritik307/toTheMoon",
-          site:"/"
+          site:"https://github.com/ritik307/toTheMoon"
         },
       ],
     };
@@ -148,10 +148,11 @@ class Home extends React.Component {
                   {data.desc}
                 </CardText>
                 <div className="icons">
-                  <a href="https://github.com/Samridhi-98">
+             
+                  <a href={data.github}>
                     <CardIcon name="github"></CardIcon>
                   </a>
-                  <a href="https://www.linkedin.com/in/samridhi-agrawal-1713201ab/">
+                  <a href={data.site}>
                     <CardIcon name="globe"></CardIcon>
                   </a>
                 </div>

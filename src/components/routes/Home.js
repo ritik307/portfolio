@@ -49,7 +49,7 @@ class Home extends React.Component {
           date: "Oct 2020-Dec 2020",
           desc: "To overcome the problem of food wastage, Onlymeal provides a two way interaction between those with a food surplus and those looking for food. The data collected from this app includes nature of the food, date of expiry, location etc. This data when aggregated can be very useful for NGOs to connect the locations with surplus with those that are in need of the food.",
           github:"https://github.com/ritik307/OnlyMeal",
-          site:" onlymeal.herokuapp.com "
+          site:"https://onlymeal.herokuapp.com/"
         },
         {
           id:2,

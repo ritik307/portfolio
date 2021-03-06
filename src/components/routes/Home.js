@@ -27,6 +27,7 @@ class Home extends React.Component {
     this.state = {
       chartData: [],
       feedData: [
+        {lang1:"Javascript", lang2:"HTML", lang3:"CSS", l1: 100, l2: 0, l3: 0 },
         {lang1:"Javascript", lang2:"HTML", lang3:"CSS", l1: 89.9, l2: 47.9, l3: 22.2 },
         {lang1:"Javascript", lang2:"HTML", lang3:"CSS", l1: 99.9, l2: 20, l3: 10 },
         {lang1:"Javascript", lang2:"HTML", lang3:"CSS", l1: 83.1, l2: 39.1, l3: 15.7 },
@@ -36,6 +37,14 @@ class Home extends React.Component {
       projectData: [
         {
           id:0,
+          name: "Rapid-JS",
+          date: "Oct 2020-Dec 2020",
+          desc: "To overcome the problem of food wastage, Onlymeal provides a two way interaction between those with a food surplus and those looking for food. The data collected from this app includes nature of the food, date of expiry, location etc. This data when aggregated can be very useful for NGOs to connect the locations with surplus with those that are in need of the food.",
+          github:"https://github.com/ritik307/Rapid-NPM-Package",
+          site:" https://www.npmjs.com/package/rapid-npm-package "
+        },
+        {
+          id:1,
           name: "OnlyMeal",
           date: "Oct 2020-Dec 2020",
           desc: "To overcome the problem of food wastage, Onlymeal provides a two way interaction between those with a food surplus and those looking for food. The data collected from this app includes nature of the food, date of expiry, location etc. This data when aggregated can be very useful for NGOs to connect the locations with surplus with those that are in need of the food.",
@@ -43,7 +52,7 @@ class Home extends React.Component {
           site:" onlymeal.herokuapp.com "
         },
         {
-          id:1,
+          id:2,
           name: "Psychic Doodle",
           date: "Dec 2020-Jan 2020",
           desc: "While studying one might want to draw on the same page in order to make others or self understand the concept in a deeper manner. It is a extension that allows user to doodle over the active web page. The user can doodle with different colours,shapes and strokes.",
@@ -51,7 +60,7 @@ class Home extends React.Component {
           site:"/"
         },
         {
-          id:2,
+          id:3,
           name: "Captcha IMHUMAN",
           date: "Sept 2020-Oct 2020",
           desc: "Visually impaired citizens face a lot of problems with the CAPTCHA authentication process. In some of the applications OTP is given as an alternative but not with the rest of the apps. In some of the apps audio captcha is provided but many citizens find it difficult to decipher. To overcome this problem designed a CAPTCHA using environmental sounds.",
@@ -59,7 +68,7 @@ class Home extends React.Component {
           site:"https://captcha-imhuman.herokuapp.com/"
         },
         {
-          id:3,
+          id:4,
           name: "Paradise",
           date: "Apr 2020-May 2020",
           desc: "A blogging web Application that allowes user to post thier blogs. Application allows user to create their account. User can add comment to others post. Only registered users are allowed to post the content on the application. Registered users can edit/delete their post.",
@@ -67,7 +76,7 @@ class Home extends React.Component {
           site:"/"
         },
         {
-          id:4,
+          id:5,
           name: "toTheMoon",
           date: "May 2020-May 2020",
           desc: "toTheMoon is a link management platform that lets you harness the power of your links by shortening, sharing, managing and analyzing links to your content.",

@@ -87,7 +87,7 @@ class About extends React.Component {
             <Hr />
             {/* <button onClick={this.changeTheme}>change mode</button> */}
             <Segment basic className="desc">
-              I'm a 2nd year student pursuing Master's in Computer Applications
+              I'm a 2<sup>nd</sup> year student pursuing Master's in Computer Applications
               from GGSIPU. I'm a passionate learner who's always willing to
               learn and work across technologies and domains. I love to explore
               new technologies and leverage them to solve real-life problems.

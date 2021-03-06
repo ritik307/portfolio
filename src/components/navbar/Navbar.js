@@ -4,9 +4,6 @@ import { Menu } from "semantic-ui-react";
 import {NavStyle,NavBarMenu,IconLink} from "./styles.js"
 // icons
 import {
-  FaGithub,
-  FaLinkedin,
-  FaTwitter,
   FaCode,
   FaUserGraduate,
   FaEdit,
@@ -17,7 +14,6 @@ import {
 import "../../css/master.css";
 //Icons
 import { RiOpenSourceFill} from "react-icons/ri";
-import { BsThreeDots } from "react-icons/bs";
 import { IconContext } from "react-icons";
 
 
@@ -44,7 +40,7 @@ class Navbar extends React.Component {
           >
             <IconLink to="/">
               <IconContext.Provider
-                value={{ className: "ico1", size: "2em" }}
+                value={{ className: "ico1", size: "1.5em" }}
               >
                 <FaCode/>
                 {/* <IconTag>
@@ -62,7 +58,7 @@ class Navbar extends React.Component {
           >
             <IconLink to="/education">
               <IconContext.Provider
-                value={{ className: "ico1", size: "2em" }}
+                value={{ className: "ico1", size: "1.5em" }}
               >
                 <FaUserGraduate/>
                 {/* <IconTag>
@@ -79,7 +75,7 @@ class Navbar extends React.Component {
           >
             <IconLink to="/workx">
               <IconContext.Provider
-                value={{ className: "ico1", size: "2em" }}
+                value={{ className: "ico1", size: "1.5em" }}
               >
                 <FaEdit/>
                 {/* <IconTag>
@@ -96,7 +92,7 @@ class Navbar extends React.Component {
           >
             <IconLink to="/about">
               <IconContext.Provider
-                value={{ className: "ico1", size: "2em" }}
+                value={{ className: "ico1", size: "1.5em" }}
               >
                 <FaUserTie/>
                 {/* <IconTag>
@@ -113,7 +109,7 @@ class Navbar extends React.Component {
           >
             <IconLink to="/contribution">
               <IconContext.Provider
-                value={{ className: "ico1", size: "2em" }}
+                value={{ className: "ico1", size: "1.5em" }}
               >
                 <RiOpenSourceFill/>
                 {/* <IconTag>

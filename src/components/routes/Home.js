@@ -39,7 +39,7 @@ class Home extends React.Component {
           id:0,
           name: "Rapid-JS",
           date: "Feb 2021-Mar 2021",
-          desc: "To overcome the problem of food wastage, Onlymeal provides a two way interaction between those with a food surplus and those looking for food. The data collected from this app includes nature of the food, date of expiry, location etc. This data when aggregated can be very useful for NGOs to connect the locations with surplus with those that are in need of the food.",
+          desc: "Fast API search and implemetation using various APIs like newsAPI, weatherAPI, memeAPI and FoodAPI. ",
           github:"https://github.com/ritik307/Rapid-NPM-Package",
           site:" https://www.npmjs.com/package/rapid-npm-package "
         },
